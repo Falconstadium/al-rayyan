@@ -4,6 +4,9 @@ import { resources } from "../resources/SharedResources";
 import { useState } from "react";
 import { NavLinks } from "./NavLinks";
 import { AnimatePresence, motion } from "framer-motion";
+import { NavMenu } from "./NavMenu";
+
+//flags
 
 export interface NavbarProps {
   langName: keyof typeof resources; // This ensures langName matches keys in `resources`.
@@ -24,7 +27,6 @@ const Navbar = ({ langName }: NavbarProps) => {
   }
 
   const [showLngMenu, setShowLngMenu] = useState(false);
-  const [showLinkMenu, setShowLinkMenu] = useState(false);
 
   return (
     <header className="font-winky px-6 py-2 shadow md:py-3">
@@ -41,9 +43,28 @@ const Navbar = ({ langName }: NavbarProps) => {
           <div className="relative">
             <button
               type="button"
-              className="flex items-center gap-1"
+              className="flex items-center gap-2 rounded px-2 py-1 transition-colors duration-200 ease-in-out hover:bg-slate-900 hover:text-white"
               onClick={() => setShowLngMenu(!showLngMenu)}
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-languages-icon lucide-languages"
+              >
+                <path d="m5 8 6 6" />
+                <path d="m4 14 6-6 2-3" />
+                <path d="M2 5h12" />
+                <path d="M7 2h1" />
+                <path d="m22 22-5-10-5 10" />
+                <path d="M14 18h6" />
+              </svg>
               {langFullName}
               {showLngMenu ? (
                 <svg
@@ -77,19 +98,20 @@ const Navbar = ({ langName }: NavbarProps) => {
                 </svg>
               )}
             </button>
+
             <AnimatePresence>
               {showLngMenu ? (
                 <motion.div
-                  className="absolute top-10 right-0 grid origin-top gap-2 rounded-sm bg-neutral-200 py-1"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0 }}
-                  transition={{ duration: 0.3 }}
+                  className="shadow-dark absolute top-10 right-3.5 grid gap-2 rounded-sm bg-neutral-200 py-1"
+                  initial={{ opacity: 0, translateY: 10 }}
+                  animate={{ opacity: 1, translateY: 0 }}
+                  exit={{ opacity: 0, translateY: 10 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
                   {langKeys.map((l) => (
                     <div
                       key={l}
-                      className="grid w-full px-3 text-center hover:bg-white"
+                      className="grid w-full px-3 text-center transition-all duration-200 ease-in-out hover:scale-105 hover:bg-white"
                     >
                       <a href={"/" + l + pathName}>{langList[l]}</a>
                     </div>
@@ -99,63 +121,7 @@ const Navbar = ({ langName }: NavbarProps) => {
             </AnimatePresence>
           </div>
 
-          <div className="relative block md:hidden">
-            <button
-              type="button"
-              onClick={() => setShowLinkMenu(!showLinkMenu)}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-menu-icon lucide-menu"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </button>
-            <AnimatePresence>
-              {showLinkMenu ? (
-                <motion.ul
-                  className="fixed top-0 -right-full z-10 grid min-h-dvh w-full place-content-center place-items-center gap-8 rounded bg-white/75 px-2 py-1 text-xl font-medium uppercase backdrop-blur-md"
-                  initial={{ right: -400 }}
-                  animate={{ right: 0 }}
-                  exit={{ right: -400 }}
-                  transition={{ duration: 0.45, ease: "easeInOut" }}
-                >
-                  <button
-                    type="button"
-                    className="absolute top-8 left-8"
-                    onClick={() => setShowLinkMenu(!showLinkMenu)}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-x-icon lucide-x"
-                    >
-                      <path d="M18 6 6 18" />
-                      <path d="m6 6 12 12" />
-                    </svg>
-                  </button>
-                  <NavLinks langName={langName} />
-                </motion.ul>
-              ) : null}
-            </AnimatePresence>
-          </div>
+          <NavMenu langName={langName} />
         </div>
       </nav>
     </header>

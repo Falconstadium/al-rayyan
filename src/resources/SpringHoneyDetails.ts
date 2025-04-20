@@ -1,5 +1,8 @@
 export const springHoney = {
   en: {
+    name: "spring honey",
+    slug: "spring-honey",
+
     text: "Spring honey is extracted from the nectar of flowers that bloom during spring, giving it unique nutritional properties and distinctive flavor. Its light golden colour and fragrant floral scent.",
 
     benefit: {
@@ -14,6 +17,9 @@ export const springHoney = {
   },
 
   fr: {
+    name: "miel de printemps",
+    slug: "miel-de-printemps",
+
     text: "Le miel de printemps est extrait du nectar des fleurs qui fleurissent au printemps, ce qui lui donne des propriétés nutritionnelles uniques et une saveur distinctive. Sa couleur dorée et son parfum floral parfumé.",
 
     benefit: {
@@ -28,6 +34,9 @@ export const springHoney = {
   },
 
   ar: {
+    name: "عسل الربيع",
+    slug: "عسل-الربيع",
+
     text: "يتم استخراج عسل الربيع من رحيق الزهور التي تتفتح خلال الربيع، مما يمنحه خصائص غذائية فريدة ونكهة مميزة. لونه الذهبي الفاتح ورائحته الزهرية العطرة.",
 
     benefit: {

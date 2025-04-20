@@ -1,29 +1,18 @@
 export const homeResources = {
   en: {
-    home: 'home',
-    lemon: 'lemon honey',
-    spring: 'spring honey',
-    dagmus: 'dagmus honey',
-    sidr: 'sidr honey',
-    eucalyptus: 'eucalyptus honey',
-    Poultry: 'Poultry honey',
+    home: "home",
+
+    carob: "carob honey",
   },
   fr: {
-    home: 'accueil',
-    lemon: 'miel de citron',
-    spring: 'miel de printemps',
-    dagmus: 'miel de dagmus',
-    sidr: 'miel de sidr',
-    eucalyptus: "miel d'eucalyptus",
-    Poultry: 'miel de Poultry',
+    home: "accueil",
+
+    sidr: "miel de sidr",
   },
   ar: {
-    home: 'الرئيسية',
-    lemon: 'عسل الليمون',
-    spring: 'عسل الربيع',
-    dagmus: 'عسل الدغموس',
-    sidr: 'عسل السدر',
-    eucalyptus: 'عسل الأوكالبتوس',
-    Poultry: 'عسل الدواجن',
+    home: "الرئيسية",
+
+    dagmus: "عسل الدغموس",
+    sidr: "عسل السدر",
   },
 };

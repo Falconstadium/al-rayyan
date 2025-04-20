@@ -1,8 +1,10 @@
 export const lemonHoneyDetails = {
   en: {
-    lemon: {
-      text: "It is the honey produced by bees from the nectar of lemon and orange blossoms, it is usually light-dense, light yellow color tilted to golden, it tastes great light, it has a smell similar to citrus fruits. The nutritional value of lemon honey is rich in flying oils, with many benefits for human health.",
-    },
+    name: "lemon honey",
+    slug: "lemon-honey",
+
+    text: "It is the honey produced by bees from the nectar of lemon and orange blossoms, it is usually light-dense, light yellow color tilted to golden, it tastes great light, it has a smell similar to citrus fruits. The nutritional value of lemon honey is rich in flying oils, with many benefits for human health.",
+
     benefit: {
       title: "Benefits of Lemon Honey:",
       detail1:
@@ -15,9 +17,11 @@ export const lemonHoneyDetails = {
   },
 
   fr: {
-    lemon: {
-      text: "C’est le miel produit par les abeilles à partir du nectar des fleurs de citron et d’orange, il est généralement léger-dense, jaune clair de couleur inclinée à l’or, il a un goût de grande lumière, il a une odeur semblable aux agrumes. La valeur nutritive du miel de citron est riche en huiles volantes, avec de nombreux avantages pour la santé humaine.",
-    },
+    name: "miel de citron",
+    slug: "miel-de-citron",
+
+    text: "C’est le miel produit par les abeilles à partir du nectar des fleurs de citron et d’orange, il est généralement léger-dense, jaune clair de couleur inclinée à l’or, il a un goût de grande lumière, il a une odeur semblable aux agrumes. La valeur nutritive du miel de citron est riche en huiles volantes, avec de nombreux avantages pour la santé humaine.",
+
     benefit: {
       title: "Avantages du miel de citron :",
       detail1:
@@ -30,9 +34,11 @@ export const lemonHoneyDetails = {
   },
 
   ar: {
-    lemon: {
-      text: "إنه العسل الذي ينتجه النحل من رحيق أزهار الليمون والبرتقال، وعادة ما يكون كثيفًا باللون الأصفر الفاتح مائلًا إلى الذهبي، ومذاقه خفيف للغاية، ورائحته تشبه رائحة الحمضيات. القيمة الغذائية لعسل الليمون غنية بالزيوت الطائرة، مع العديد من الفوائد لصحة الإنسان.",
-    },
+    name: "عسل الليمون",
+    slug: "عسل-الليمون",
+
+    text: "إنه العسل الذي ينتجه النحل من رحيق أزهار الليمون والبرتقال، وعادة ما يكون كثيفًا باللون الأصفر الفاتح مائلًا إلى الذهبي، ومذاقه خفيف للغاية، ورائحته تشبه رائحة الحمضيات. القيمة الغذائية لعسل الليمون غنية بالزيوت الطائرة، مع العديد من الفوائد لصحة الإنسان.",
+
     benefit: {
       title: "فوائد عسل الليمون:",
       detail1:

@@ -24,7 +24,7 @@ export const Home = () => {
               <img
                 src={p.image}
                 alt={p.image}
-                className="aspect-square w-3/4"
+                className="aspect-square w-full md:w-3/4"
               />
               <div className="grid place-items-center gap-2">
                 <h1 className="font-semibold capitalize">{p.title}</h1>

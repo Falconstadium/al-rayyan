@@ -9,21 +9,25 @@ export const NavLinks = ({ langName }: NavbarProps) => {
   if (!pagePath) {
     pagePath = "home";
   }
+
+  const links = [
+    { id: 1, path: "/", href: `${resources[lang].home}` },
+    { id: 2, path: "/about", href: `${resources[lang].about}` },
+    { id: 3, path: "/contact", href: `${resources[lang].contact}` },
+  ];
+
   return (
     <>
-      <li>
-        <Link to={"/" + lang}>{resources[lang].home}</Link>
-      </li>
-      <li>
-        <Link to={"/" + lang + `/${resources[lang].about}`}>
-          {resources[lang].about}
-        </Link>
-      </li>
-      <li>
-        <Link to={"/" + lang + `/${resources[lang].contact}`}>
-          {resources[lang].contact}
-        </Link>
-      </li>
+      {links.map((link) => (
+        <li key={link.id}>
+          <Link
+            to={"/" + lang + link.path}
+            className="rounded px-2 py-1 transition-colors duration-200 ease-in-out hover:bg-slate-900 hover:text-white"
+          >
+            {link.href}
+          </Link>
+        </li>
+      ))}
     </>
   );
 };

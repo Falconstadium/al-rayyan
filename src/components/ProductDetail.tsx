@@ -5,24 +5,28 @@ export const ProductDetail = () => {
   const { slug } = useParams();
   const items = products.find((p) => p.slug === slug);
   return (
-    <section className="relative mx-auto place-content-center py-7 md:max-w-xl">
-      <div className="grid place-items-center gap-4 px-4">
-        <img
-          src={items?.image}
-          alt={items?.image}
-          loading="lazy"
-          className="aspect-square w-40 rounded object-cover"
-        />
-        <h1 className="text-xl font-bold capitalize">{items?.title}</h1>
-        <p className="text-justify text-sm">{items?.text}</p>
-        <div>
-          <h3 className="mb-3 font-semibold capitalize">
+    <section className="relative container mx-auto min-h-dvh place-content-center p-7">
+      <div className="grid place-content-center place-items-center gap-4 px-4 md:grid-cols-2 md:gap-0">
+        <div className="grid place-items-center gap-2">
+          <img
+            src={items?.image}
+            alt={items?.image}
+            loading="lazy"
+            className="aspect-square w-48 object-cover md:w-52"
+          />
+          <h1 className="font-winky text-xl font-bold tracking-wide capitalize md:text-2xl">
+            {items?.title}
+          </h1>
+        </div>
+        <div className="grid gap-3">
+          <p className="font-inter mb-5">{items?.text}</p>
+          <h3 className="font-winky text-lg font-semibold capitalize md:text-xl">
             {items?.benefit?.title}
           </h3>
-          <div className="grid gap-1">
-            <p className="text-justify text-sm">{items?.benefit?.detail1}</p>
-            <p className="text-justify text-sm">{items?.benefit?.detail2}</p>
-            <p className="text-justify text-sm">{items?.benefit?.detail3}</p>
+          <div className="font-inter grid gap-2">
+            <p>{items?.benefit?.detail1}</p>
+            <p>{items?.benefit?.detail2}</p>
+            <p>{items?.benefit?.detail3}</p>
           </div>
         </div>
       </div>

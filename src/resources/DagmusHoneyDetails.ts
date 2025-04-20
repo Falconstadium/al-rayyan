@@ -1,6 +1,9 @@
 export const dagmusHoney = {
   en: {
-    text: "Dagmus honey is a rare and unique type of natural honey produced from the nectar of the flowers of the plant 'Dagmus,' a drought-resistant spinal plant known as its medicinal properties. This honey has several characteristics that make it special: color: dark brown sometimes tends to be black.",
+    name: "dagmus honey",
+    slug: "dagmus-honey",
+
+    text: "Dagmus honey is a rare and unique type of natural honey produced from the nectar of the flowers of the plant 'Dagmus,' a drought-resistant spinal plant known as its medicinal properties. This honey has several characteristics that make it special color dark brown sometimes tends to be black.",
 
     benefit: {
       title: "Benefits of Dagmus Honey:",
@@ -12,10 +15,13 @@ export const dagmusHoney = {
   },
 
   fr: {
-    text: "Le miel de Dagmus est un type rare et unique de miel naturel produit à partir du nectar des fleurs de la plante 'Dagmus', une plante spinale résistante à la sécheresse connue pour ses propriétés médicinales. Ce miel a plusieurs caractéristiques qui le rendent spécial : couleur : brun foncé parfois tend à être noir.",
+    name: "miel de dagmus",
+    slug: "miel-de-dagmus",
+
+    text: "Le miel de Dagmus est un type rare et unique de miel naturel produit à partir du nectar des fleurs de la plante 'Dagmus', une plante spinale résistante à la sécheresse connue pour ses propriétés médicinales. Ce miel a plusieurs caractéristiques qui le rendent spécial couleur brun foncé parfois tend à être noir.",
 
     benefit: {
-      title: "Avantages du miel de Dagmus :",
+      title: "Avantages du miel de Dagmus:",
       detail1:
         "Le miel de dagmus se caractérise par sa couleur brune et jaune, mais après un certain temps il se transforme en noir, le miel de dagmus est un goût acidulé qui laisse une sensation de chaleur dans la gorge lorsqu’il est consommé.",
       detail2:
@@ -24,7 +30,10 @@ export const dagmusHoney = {
   },
 
   ar: {
-    text: "عسل الدغموس هو نوع نادر وفريد من العسل الطبيعي المنتج من رحيق أزهار النبات «دغموس»، وهو نبات شوكي مقاوم للجفاف يُعرف بخصائصه الطبية. يتميز هذا العسل بالعديد من الخصائص التي تجعله مميزًا: اللون: يميل اللون البني الداكن أحيانًا إلى أن يكون أسود.",
+    name: "عسل الدغموس",
+    slug: "عسل-الدغموس",
+
+    text: "عسل الدغموس هو نوع نادر وفريد من العسل الطبيعي المنتج من رحيق أزهار النبات «دغموس»، وهو نبات شوكي مقاوم للجفاف يُعرف بخصائصه الطبية. يتميز هذا العسل بالعديد من الخصائص التي تجعله مميزًا. يميل اللون البني الداكن أحيانًا إلى أن يكون أسود.",
 
     benefit: {
       title: "فوائد عسل الدغموس:",
