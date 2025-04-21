@@ -15,11 +15,11 @@ export const Home = () => {
     <>
       <Navbar langName={validatedLang} />
       <section className="font-inter mx-auto w-full place-content-center">
-        <div className="container mx-auto grid place-content-center gap-12 px-4 py-16 md:grid-cols-3 md:px-8">
+        <div className="container mx-auto grid place-content-center gap-12 px-4 py-16 md:grid-cols-3 md:gap-8 md:px-8 lg:grid-cols-4">
           {products.map((p) => (
             <div
               key={p.id}
-              className="shadow-dark grid place-items-center gap-2 overflow-hidden rounded pb-5"
+              className="shadow-dark grid w-full place-items-center gap-2 overflow-hidden rounded pb-5"
             >
               <img
                 src={p.image}

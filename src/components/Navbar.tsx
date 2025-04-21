@@ -102,7 +102,7 @@ const Navbar = ({ langName }: NavbarProps) => {
             <AnimatePresence>
               {showLngMenu ? (
                 <motion.div
-                  className="shadow-dark absolute top-10 right-3.5 grid gap-2 rounded-sm bg-neutral-200 py-1"
+                  className="shadow-dark absolute top-10 right-4 grid gap-2 rounded-sm bg-neutral-200 py-1"
                   initial={{ opacity: 0, translateY: 10 }}
                   animate={{ opacity: 1, translateY: 0 }}
                   exit={{ opacity: 0, translateY: 10 }}
