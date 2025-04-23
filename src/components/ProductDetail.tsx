@@ -1,12 +1,18 @@
 import { useParams } from "react-router-dom";
 import { products } from "../assets/data";
+import { motion } from "framer-motion";
 
 export const ProductDetail = () => {
   const { slug } = useParams();
   const items = products.find((p) => p.slug === slug);
   return (
     <section className="relative container mx-auto min-h-dvh place-content-center p-7">
-      <div className="grid place-content-center place-items-center gap-4 px-4 md:grid-cols-2 md:gap-0">
+      <motion.div
+        className="grid place-content-center place-items-center gap-4 md:grid-cols-2 md:gap-0"
+        initial={{ opacity: 0, translateY: -15 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+      >
         <div className="grid place-items-center gap-2">
           <img
             src={items?.image}
@@ -29,7 +35,7 @@ export const ProductDetail = () => {
             <p>{items?.benefit?.detail3}</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

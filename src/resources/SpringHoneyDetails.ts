@@ -23,7 +23,7 @@ export const springHoney = {
     text: "Le miel de printemps est extrait du nectar des fleurs qui fleurissent au printemps, ce qui lui donne des propriétés nutritionnelles uniques et une saveur distinctive. Sa couleur dorée et son parfum floral parfumé.",
 
     benefit: {
-      title: "Avantages du miel de printemps :",
+      title: "Avantages du miel de printemps:",
       detail1:
         "Le miel de printemps est riche en antibactériens et en virus, ce qui le rend efficace pour améliorer les fonctions du système immunitaire et lutter contre les maladies",
       detail2:

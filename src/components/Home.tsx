@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { products } from "../assets/data";
 import Navbar from "./Navbar";
 import { getLang } from "../lib";
+import { motion } from "framer-motion";
 
 type LanguageKey = "en" | "fr" | "ar";
 
@@ -14,12 +15,15 @@ export const Home = () => {
   return (
     <>
       <Navbar langName={validatedLang} />
-      <section className="font-inter mx-auto w-full place-content-center">
-        <div className="container mx-auto grid place-content-center gap-12 px-4 py-16 md:grid-cols-3 md:gap-8 md:px-8 lg:grid-cols-4">
+      <section className="font-inter mx-auto w-full">
+        <div className="container mx-auto grid gap-12 px-4 py-16 md:grid-cols-3 md:gap-8 md:px-8">
           {products.map((p) => (
-            <div
+            <motion.div
               key={p.id}
-              className="shadow-dark grid w-full place-items-center gap-2 overflow-hidden rounded pb-5"
+              className="shadow-dark grid place-items-center gap-2 overflow-hidden rounded pb-5"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeInOut", delay: p.delay }}
             >
               <img
                 src={p.image}
@@ -35,7 +39,7 @@ export const Home = () => {
                   Read More
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

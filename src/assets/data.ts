@@ -7,6 +7,9 @@ import { dagmusHoney } from "../resources/DagmusHoneyDetails";
 import { sidrHoney } from "../resources/SidrHoneyDetails";
 import { carobHoney } from "../resources/CarubHoneyDetails";
 import { eucalyptusHoney } from "../resources/EucalyptusHoneyDetails";
+import { thornsHoney } from "../resources/ThornsHoneyDetails";
+import { thymeHoney } from "../resources/ThymeHoneyDetails";
+import { lavenderHoney } from "../resources/LavenderHoneyDetails";
 
 type LanguageKey = keyof typeof homeResources;
 
@@ -25,6 +28,7 @@ export const products = [
       detail2: `${lemonHoneyDetails[lang].benefit.detail2}`,
       detail3: `${lemonHoneyDetails[lang].benefit.detail3}`,
     },
+    delay: 1,
   },
   {
     id: 2,
@@ -38,6 +42,7 @@ export const products = [
       detail2: `${springHoney[lang].benefit.detail2}`,
       detail3: `${springHoney[lang].benefit.detail3}`,
     },
+    delay: 2,
   },
   {
     id: 3,
@@ -50,6 +55,7 @@ export const products = [
       detail1: `${dagmusHoney[lang].benefit.detail1}`,
       detail2: `${dagmusHoney[lang].benefit.detail2}`,
     },
+    delay: 3,
   },
   {
     id: 4,
@@ -63,6 +69,7 @@ export const products = [
       detail2: `${sidrHoney[lang].benefit.detail2}`,
       detail3: `${sidrHoney[lang].benefit.detail3}`,
     },
+    delay: 4,
   },
   {
     id: 5,
@@ -76,6 +83,7 @@ export const products = [
       detail2: `${eucalyptusHoney[lang].benefit.detail2}`,
       detail3: `${eucalyptusHoney[lang].benefit.detail3}`,
     },
+    delay: 5,
   },
   {
     id: 6,
@@ -89,5 +97,47 @@ export const products = [
       detail2: `${carobHoney[lang].benefit.detail2}`,
       detail3: `${carobHoney[lang].benefit.detail3}`,
     },
+    delay: 6,
+  },
+  {
+    id: 7,
+    image: honey,
+    title: `${thornsHoney[lang].name}`,
+    slug: `${thornsHoney[lang].slug}`,
+    text: `${thornsHoney[lang].text}`,
+    benefit: {
+      title: `${thornsHoney[lang].benefit.title}`,
+      detail1: `${thornsHoney[lang].benefit.detail1}`,
+      detail2: `${thornsHoney[lang].benefit.detail2}`,
+      detail3: `${thornsHoney[lang].benefit.detail3}`,
+    },
+    delay: 7,
+  },
+  {
+    id: 8,
+    image: honey,
+    title: `${thymeHoney[lang].name}`,
+    slug: `${thymeHoney[lang].slug}`,
+    text: `${thymeHoney[lang].text}`,
+    benefit: {
+      title: `${thymeHoney[lang].benefit.title}`,
+      detail1: `${thymeHoney[lang].benefit.detail1}`,
+      detail2: `${thymeHoney[lang].benefit.detail2}`,
+    },
+    delay: 8,
+  },
+  {
+    id: 9,
+    image: honey,
+    title: `${lavenderHoney[lang].name}`,
+    slug: `${lavenderHoney[lang].slug}`,
+    text: `${lavenderHoney[lang].text}`,
+    benefit: {
+      title: `${lavenderHoney[lang].benefit.title}`,
+      detail1: `${lavenderHoney[lang].benefit.detail1}`,
+      detail2: `${lavenderHoney[lang].benefit.detail2}`,
+      detail3: `${lavenderHoney[lang].benefit.detail3}`,
+    },
+    delay: 9,
   },
 ];
