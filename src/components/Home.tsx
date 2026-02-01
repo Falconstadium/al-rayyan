@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 
 type LanguageKey = "en" | "fr" | "ar";
 
-const lang = getLang();
+const lang = getLang() as LanguageKey;
 const validatedLang: LanguageKey = ["en", "fr", "ar"].includes(lang)
   ? (lang as LanguageKey)
   : "en";
