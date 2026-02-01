@@ -3,7 +3,7 @@ import { resources } from "../resources/SharedResources";
 import { NavbarProps } from "./Navbar";
 
 export const NavLinks = ({ langName }: NavbarProps) => {
-  let lang = langName;
+  const lang = langName;
   let pagePath = window.location.pathname.split(lang)[1];
   pagePath = pagePath.split("/")[1];
   if (!pagePath) {

@@ -1,19 +1,32 @@
+import { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./components/Home";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
+import { Home } from "./components/Home";
 import { ProductDetail } from "./components/ProductDetail";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route index Component={Home} />
-        <Route path="/:lang/" Component={Home} />
-        <Route path="/:lang/about" Component={About} />
-        <Route path="/:lang/contact" Component={Contact} />
-        <Route path="/:lang/:slug" Component={ProductDetail} />
-      </Routes>
+      <Suspense
+        fallback={
+          <div className="grid min-h-dvh place-items-center bg-neutral-100">
+            <div className="flex flex-row gap-2">
+              <div className="h-4 w-4 animate-bounce rounded-full bg-blue-700 [animation-delay:.7s]"></div>
+              <div className="h-4 w-4 animate-bounce rounded-full bg-blue-700 [animation-delay:.3s]"></div>
+              <div className="h-4 w-4 animate-bounce rounded-full bg-blue-700 [animation-delay:.7s]"></div>
+            </div>
+          </div>
+        }
+      >
+        <Routes>
+          <Route index Component={Home} />
+          <Route path="/:lang/" Component={Home} />
+          <Route path="/:lang/about" Component={About} />
+          <Route path="/:lang/contact" Component={Contact} />
+          <Route path="/:lang/:slug" Component={ProductDetail} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

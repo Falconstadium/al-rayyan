@@ -1,12 +1,12 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { products } from "../assets/data";
-import Navbar from "./Navbar";
 import { getLang } from "../lib";
-import { motion } from "framer-motion";
+import Navbar from "./Navbar";
 
 type LanguageKey = "en" | "fr" | "ar";
 
-const lang: any = getLang();
+const lang = getLang();
 const validatedLang: LanguageKey = ["en", "fr", "ar"].includes(lang)
   ? (lang as LanguageKey)
   : "en";
@@ -15,30 +15,25 @@ export const Home = () => {
   return (
     <>
       <Navbar langName={validatedLang} />
-      <section className="font-inter mx-auto w-full">
-        <div className="container mx-auto grid gap-12 px-4 py-16 md:grid-cols-3 md:gap-8 md:px-8">
+      <section className="font-inter w-full">
+        <div className="mx-auto grid max-w-4xl gap-12 px-6 py-12 md:grid-cols-2 md:gap-8 md:px-8 lg:grid-cols-3">
           {products.map((p) => (
             <motion.div
               key={p.id}
               className="shadow-dark grid place-items-center gap-2 overflow-hidden rounded pb-5"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, ease: "easeInOut", delay: p.delay }}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 0.1 * p.id }}
             >
               <img
                 src={p.image}
-                alt={p.image}
-                className="aspect-square w-full md:w-3/4"
+                alt={p.title}
+                className="aspect-square w-3/4"
               />
-              <div className="grid place-items-center gap-2">
-                <h1 className="font-semibold capitalize">{p.title}</h1>
-                <Link
-                  to={p.slug}
-                  className="rounded bg-green-700 px-3 py-1 text-sm font-medium text-white transition-colors duration-200 ease-in-out hover:bg-green-600"
-                >
-                  Read More
-                </Link>
-              </div>
+
+              <Link to={p.slug} className="font-semibold capitalize">
+                {p.title}
+              </Link>
             </motion.div>
           ))}
         </div>

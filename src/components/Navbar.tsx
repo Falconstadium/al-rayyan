@@ -1,12 +1,8 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { langList } from "../lib";
 import { resources } from "../resources/SharedResources";
-import { useState } from "react";
-import { NavLinks } from "./NavLinks";
-import { AnimatePresence, motion } from "framer-motion";
-import { NavMenu } from "./NavMenu";
-
-//flags
 
 export interface NavbarProps {
   langName: keyof typeof resources; // This ensures langName matches keys in `resources`.
@@ -19,7 +15,7 @@ const Navbar = ({ langName }: NavbarProps) => {
     keyof typeof langList
   >;
 
-  let lang = langName;
+  const lang = langName;
   let pagePath = window.location.pathname.split(lang)[1];
   pagePath = pagePath.split("/")[1];
   if (!pagePath) {
@@ -34,10 +30,6 @@ const Navbar = ({ langName }: NavbarProps) => {
         <Link to={"/" + lang} className="text-xl font-semibold capitalize">
           {resources[langName].logo}
         </Link>
-
-        <ul className="hidden items-center gap-4 font-medium uppercase md:flex">
-          <NavLinks langName={langName} />
-        </ul>
 
         <div className="flex items-center gap-4">
           <div className="relative">
@@ -120,8 +112,6 @@ const Navbar = ({ langName }: NavbarProps) => {
               ) : null}
             </AnimatePresence>
           </div>
-
-          <NavMenu langName={langName} />
         </div>
       </nav>
     </header>
