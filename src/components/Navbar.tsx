@@ -26,7 +26,7 @@ const Navbar = ({ langName }: NavbarProps) => {
 
   return (
     <header className="font-winky px-6 py-2 shadow md:py-3">
-      <nav className="container mx-auto flex items-center justify-between">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between">
         <Link to={"/" + lang} className="text-xl font-semibold capitalize">
           {resources[langName].logo}
         </Link>
