@@ -1,9 +1,8 @@
-import { Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { About } from "./components/About";
-import { Contact } from "./components/Contact";
-import { Home } from "./components/Home";
-import { ProductDetail } from "./components/ProductDetail";
+
+const Home = lazy(() => import("./pages/Home"));
+const ProductDetail = lazy(() => import("./pages/ProductDetail"));
 
 function App() {
   return (
@@ -21,10 +20,8 @@ function App() {
       >
         <Routes>
           <Route index Component={Home} />
-          <Route path="/:lang/" Component={Home} />
-          <Route path="/:lang/about" Component={About} />
-          <Route path="/:lang/contact" Component={Contact} />
-          <Route path="/:lang/:slug" Component={ProductDetail} />
+          <Route path="/:lang/" element={<Home />} />
+          <Route path="/:lang/:slug" element={<ProductDetail />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
