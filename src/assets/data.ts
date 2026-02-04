@@ -1,15 +1,19 @@
+import argan from "../assets/images/argan.jpg";
+import oil from "../assets/images/oil.jpg";
 import { getLang } from "../lib";
-import { lemonHoneyDetails } from "../resources/lemonHoneyDetails";
-import { homeResources } from "../resources/Home";
-import honey from "/miel.svg";
-import { springHoney } from "../resources/SpringHoneyDetails";
-import { dagmusHoney } from "../resources/DagmusHoneyDetails";
-import { sidrHoney } from "../resources/SidrHoneyDetails";
+import { arganeOil } from "../resources/ArganeOil";
 import { carobHoney } from "../resources/CarubHoneyDetails";
+import { dagmusHoney } from "../resources/DagmusHoneyDetails";
 import { eucalyptusHoney } from "../resources/EucalyptusHoneyDetails";
+import { homeResources } from "../resources/Home";
+import { lavenderHoney } from "../resources/LavenderHoneyDetails";
+import { lemonHoneyDetails } from "../resources/lemonHoneyDetails";
+import { oudOil } from "../resources/OudOil";
+import { sidrHoney } from "../resources/SidrHoneyDetails";
+import { springHoney } from "../resources/SpringHoneyDetails";
 import { thornsHoney } from "../resources/ThornsHoneyDetails";
 import { thymeHoney } from "../resources/ThymeHoneyDetails";
-import { lavenderHoney } from "../resources/LavenderHoneyDetails";
+import honey from "/miel.svg";
 
 type LanguageKey = keyof typeof homeResources;
 
@@ -28,7 +32,6 @@ export const products = [
       detail2: `${lemonHoneyDetails[lang].benefit.detail2}`,
       detail3: `${lemonHoneyDetails[lang].benefit.detail3}`,
     },
-    delay: 1,
   },
   {
     id: 2,
@@ -42,7 +45,6 @@ export const products = [
       detail2: `${springHoney[lang].benefit.detail2}`,
       detail3: `${springHoney[lang].benefit.detail3}`,
     },
-    delay: 2,
   },
   {
     id: 3,
@@ -55,7 +57,6 @@ export const products = [
       detail1: `${dagmusHoney[lang].benefit.detail1}`,
       detail2: `${dagmusHoney[lang].benefit.detail2}`,
     },
-    delay: 3,
   },
   {
     id: 4,
@@ -69,7 +70,6 @@ export const products = [
       detail2: `${sidrHoney[lang].benefit.detail2}`,
       detail3: `${sidrHoney[lang].benefit.detail3}`,
     },
-    delay: 4,
   },
   {
     id: 5,
@@ -83,7 +83,6 @@ export const products = [
       detail2: `${eucalyptusHoney[lang].benefit.detail2}`,
       detail3: `${eucalyptusHoney[lang].benefit.detail3}`,
     },
-    delay: 5,
   },
   {
     id: 6,
@@ -97,7 +96,6 @@ export const products = [
       detail2: `${carobHoney[lang].benefit.detail2}`,
       detail3: `${carobHoney[lang].benefit.detail3}`,
     },
-    delay: 6,
   },
   {
     id: 7,
@@ -111,7 +109,6 @@ export const products = [
       detail2: `${thornsHoney[lang].benefit.detail2}`,
       detail3: `${thornsHoney[lang].benefit.detail3}`,
     },
-    delay: 7,
   },
   {
     id: 8,
@@ -124,7 +121,6 @@ export const products = [
       detail1: `${thymeHoney[lang].benefit.detail1}`,
       detail2: `${thymeHoney[lang].benefit.detail2}`,
     },
-    delay: 8,
   },
   {
     id: 9,
@@ -138,6 +134,30 @@ export const products = [
       detail2: `${lavenderHoney[lang].benefit.detail2}`,
       detail3: `${lavenderHoney[lang].benefit.detail3}`,
     },
-    delay: 9,
+  },
+  {
+    id: 10,
+    image: oil,
+    title: `${oudOil[lang].name}`,
+    slug: `${oudOil[lang].slug}`,
+    text: `${oudOil[lang].text}`,
+    benefit: {
+      title: `${oudOil[lang].benefit.title}`,
+      detail1: `${oudOil[lang].benefit.detail1}`,
+      detail2: `${oudOil[lang].benefit.detail2}`,
+      detail3: `${oudOil[lang].benefit.detail3}`,
+    },
+  },
+  {
+    id: 11,
+    image: argan,
+    title: `${arganeOil[lang].name}`,
+    slug: `${arganeOil[lang].slug}`,
+    text: `${arganeOil[lang].text}`,
+    benefit: {
+      title: `${arganeOil[lang].benefit.title}`,
+      detail1: `${arganeOil[lang].benefit.detail1}`,
+      detail2: `${arganeOil[lang].benefit.detail2}`,
+    },
   },
 ];
