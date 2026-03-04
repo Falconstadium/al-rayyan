@@ -13,6 +13,12 @@ import { sidrHoney } from "../resources/SidrHoneyDetails";
 import { springHoney } from "../resources/SpringHoneyDetails";
 import { thornsHoney } from "../resources/ThornsHoneyDetails";
 import { thymeHoney } from "../resources/ThymeHoneyDetails";
+import caroubHoney from "./images/carob-honey.webp";
+import chawkHoney from "./images/chawk-honey.jpg";
+import dagmosHoney from "./images/dagmus-honey.webp";
+import lavendereHoney from "./images/lavender-honey.webp";
+import lemonHoney from "./images/lemon-honey.webp";
+import thimeHoney from "./images/thime-honey.webp";
 import honey from "/miel.svg";
 
 type LanguageKey = keyof typeof homeResources;
@@ -22,7 +28,7 @@ const lang = getLang() as LanguageKey;
 export const products = [
   {
     id: 1,
-    image: honey,
+    image: lemonHoney,
     title: `${lemonHoneyDetails[lang].name}`,
     slug: `${lemonHoneyDetails[lang].slug}`,
     text: `${lemonHoneyDetails[lang].text}`,
@@ -48,7 +54,7 @@ export const products = [
   },
   {
     id: 3,
-    image: honey,
+    image: dagmosHoney,
     title: `${dagmusHoney[lang].name}`,
     slug: `${dagmusHoney[lang].slug}`,
     text: `${dagmusHoney[lang].text}`,
@@ -86,7 +92,7 @@ export const products = [
   },
   {
     id: 6,
-    image: honey,
+    image: caroubHoney,
     title: `${carobHoney[lang].name}`,
     slug: `${carobHoney[lang].slug}`,
     text: `${carobHoney[lang].text}`,
@@ -99,7 +105,7 @@ export const products = [
   },
   {
     id: 7,
-    image: honey,
+    image: chawkHoney,
     title: `${thornsHoney[lang].name}`,
     slug: `${thornsHoney[lang].slug}`,
     text: `${thornsHoney[lang].text}`,
@@ -112,7 +118,7 @@ export const products = [
   },
   {
     id: 8,
-    image: honey,
+    image: thimeHoney,
     title: `${thymeHoney[lang].name}`,
     slug: `${thymeHoney[lang].slug}`,
     text: `${thymeHoney[lang].text}`,
@@ -124,7 +130,7 @@ export const products = [
   },
   {
     id: 9,
-    image: honey,
+    image: lavendereHoney,
     title: `${lavenderHoney[lang].name}`,
     slug: `${lavenderHoney[lang].slug}`,
     text: `${lavenderHoney[lang].text}`,

@@ -20,17 +20,19 @@ const Home = () => {
           {products.map((p) => (
             <motion.div
               key={p.id}
-              className="shadow-dark grid place-items-center gap-2 overflow-hidden rounded pb-5"
+              className="shadow-dark grid place-content-between place-items-center gap-2 overflow-hidden rounded pb-4"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeInOut", delay: 0.1 * p.id }}
             >
-              <img
-                src={p.image}
-                alt={p.title}
-                loading="lazy"
-                className="aspect-square w-3/4"
-              />
+              <div className="h-full w-full">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  className="w-full object-cover"
+                />
+              </div>
 
               <Link to={p.slug} className="font-semibold capitalize">
                 {p.title}
